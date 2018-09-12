@@ -14,7 +14,7 @@ Species.prototype.getSpecies = function(species_name) {
     });
     $.get('http://eol.org/api/search/1.0.json?q='+species_name + '&page=1&exact=false').then(function(resp){
         console.log(resp);
-        $('.link').html('<h3>More info: ' +'<a target="_blank" href='+ resp.results[0].link +'><i>Learn more</i></a>'+'</h3>');
+        $('.link').html('<h5>' +'<a target="_blank" href='+ resp.results[0].link +'><i>Learn more</i></a>'+'</h5>');
 
     }).fail(function(error){
         $('.error').html('<h3>No results for ' + '<i>'+species_name +'</i>'+ '</h3>');
@@ -23,6 +23,7 @@ Species.prototype.getSpecies = function(species_name) {
 
 
 exports.speciesModule = Species;
+//  http://eol.org/api/data_objects/1.0/30073527.json?taxonomy=true&cache_ttl=&language=en
 
 },{}],2:[function(require,module,exports){
 var Species = require('./../js/user.js').speciesModule;
