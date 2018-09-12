@@ -6,6 +6,10 @@ $(document).ready(function (){
         event.preventDefault();
         var species_name = $("#species-name").val();
         $("#species-name").val("");
+        $('.Scientificname').empty("");
+        $('.Englishname').empty("");
+        $('.error').empty("");
+        $('.link').empty("");
         currentSearchObject.getSpecies(species_name);
 
         console.log(species_name);
