@@ -10,6 +10,9 @@ $(document).ready(function (){
         $('.Englishname').empty("");
         $('.error').empty("");
         $('.link').empty("");
+        $('.username').empty("");
+        $('.title').empty("");
+        $('.desc').empty("");
         currentSearchObject.getSpecies(species_name);
 
         console.log(species_name);
